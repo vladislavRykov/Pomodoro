@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-bar">
+            <div class="music-search">
+                <div class="music-search-content">
+                    <h2>Поиск песни</h2>
+                    <input data-type="search" class="search-input" type="text" placeholder="Введи название песни...">
+                </div>
+            </div>
+          <div data-music-content class="music-content">
+            <div data-music-item="true" class="music-item">
+                <div class="music-info">
+                    <h2>Outsiders - Fleeting words</h2>
+                    <p class="music-from">Nier Replicant</p>
+                </div>
+                <div class="music-audio">
+                    <audio data-type="audio" src="./audio/keigo-hoashi-fleeting-words-outsider.mp3"></audio>
+                </div>
+                <div class="music-img">
+                    <img src="https://i.pinimg.com/originals/3d/8f/f4/3d8ff4a0b259c6569d291ac3d7d27974.jpg" alt="">
+                </div>
+            </div>
+            <div data-music-item="true" class="music-item">
+                <div class="music-info">
+                    <h2>Outsiders - Fleeting words</h2>
+                    <p class="music-from">Nier Replicant</p>
+                </div>
+                <div class="music-audio">
+                    <audio data-type="audio" src="./audio/keigo-hoashi-fleeting-words-outsider.mp3"></audio>
+                </div>
+                <div class="music-img">
+                    <img src="https://i.pinimg.com/originals/3d/8f/f4/3d8ff4a0b259c6569d291ac3d7d27974.jpg" alt="">
+                </div>
+            </div>
+          </div>
+          <div class="music-controls-root">
+              <div class="music-controls">
+                <div data-btn="pause" class="music-PnS-btn">
+                    <!-- <i class="fa-solid fa-play"></i> -->
+                    <i class="fa-solid fa-pause"></i>
+                </div>
+                <div class="music-time">
+                    <span class="time-num time-start music-time-item">0:00</span>
+                    <div class="music-time-item slider-container">
+                        <span class="time-progress"></span>
+                        <input class="time-slider" type="range" min="0" max="100" step="1" value="0">
+                    </div>
+                    <span class="time-num time-end music-time-item">100</span>
+                </div>
+                <div class="music-volume">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <!-- <i class="fa-solid fa-volume-low"></i>
+                    <i class="fa-solid fa-volume-xmark"></i>
+                    <i class="fa-solid fa-volume"></i> -->
+                    <input class="volume-slider" type="range" min="0" max="100" step="1" value="30">
+                </div>
+              </div>
+          </div>  
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title">TIME TO WORK, SON</h1>
+                    <div class="timer-block">
+                        <div class="brothers semis circle circle-1"></div>
+                        <div class="brothers semis circle circle-2"></div>
+                        <div class="semis circle circle-3"></div>
+                        <div class="circle circle-cover"></div>
+                        <div class="time">
+                            <h2 class="timer-status">Study</h2>
+                            <span class="timerTime">
+                                <span data-hours="true">0</span>:<span data-minutes="true">05</span>:<span data-seconds="true">00</span>
+                            </span>
+                            <div class="time-choose">
+                                <input data-type="timeChooser" value="10" type="range" min="10" max="90" step="5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timer-buttons">
+                        <button data-type="start" class="btns btn-start">Start</button>
+                        <div class="counter">0</div>
+                        <button class="btns reset">Reset</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+<script src="./musicConstrols.js"></script>
+<script src="./main.js"></script>
+<script type="module" src="./music.js"></script>
+</body>
+</html>
